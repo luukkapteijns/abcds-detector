@@ -79,6 +79,22 @@ def get_feature_configs() -> list[dict]:
             ],
             "annotations_function": "detect_dynamic_start",
         },
+       {
+            "id": "Clear Hook",
+            "name": "Clear Hook",
+            "category": "Attract",
+            "criteria": "The first shot in the video has a clear hook",
+            "type": "first_5_secs_video",
+            "group_by": "first_5_secs_video",
+            "question": "Does the first shot in the video have a clear hook to entice the audience to keep watching and give a teaser for the narrative and message?",
+            "instructions": [
+                "Consider the following criteria for your answer: {criteria}.",
+                "Look through each frame in the video carefully and answer the question.",
+                "Evaluate if there’s an emotional hook, problem-solving hook or eye-catching hook.",
+                "Return True if and only if one of three hooks is present",
+            ],
+            "annotations_function": "detect_dynamic_start",
+
         {
             "id": "a_quick_pacing",
             "name": "Quick Pacing",
